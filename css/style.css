@@ -1,0 +1,247 @@
+@charset "utf-8";
+html {
+	font-size: 16px;
+	font-family: Arial, Hiragino, Verdana, sans-serif;
+	height: 100%;
+	background: #faf8ef;
+	color: #776e65;
+	margin: 0;
+	padding: 0;
+
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-overflow-scrolling: touch;
+
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-o-user-select:none;
+	user-select:none;
+}
+body{
+	height: 100%
+}
+
+div.cell-container-wrapper {
+	width: 540px;
+	margin: 0 auto;
+	position: relative;
+}
+div.control-container {
+	margin:10px 0;
+}
+div.score-container {
+	display: inline-block;
+	height: 90px;
+	background-color: #bbada3;
+	width: 150px;
+	border-radius: 10px;
+	text-align: center;
+	margin-right:10px;
+	padding: 12px;
+}
+div.score-container span.score-title {
+	display: block;
+	color: #ccc0b5;
+	font-weight: bold;
+	font-size: 24px;
+}
+div.score-container span.score-title:last-child{
+	font-size: 15px;
+}
+div.button-container {
+	vertical-align: top;
+	padding-top: 10px;
+	display: inline-block;
+}
+div.button-container div.button{
+	cursor: pointer;
+	background-color: #ea8e59;
+	color: #ffffff;
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 4px;
+}
+div.button-container div.button:first-child{
+	margin-right: 10px;
+}
+div#restart-btn{
+	margin-right: 0;
+}
+div.score-container span.score-text {
+	color: white;
+	font-weight: bold;
+	font-size: 43px;
+}
+div.cell-container-content {
+	position: absolute;
+}
+
+div.grid-container {
+	z-index: 1;
+	position: absolute;
+	border:20px solid #bbada3;
+	border-radius: 10px;
+}
+div.grid-row {
+	height: 130px;
+	display: block;
+	margin-bottom: 0;
+}
+div.grid-row:last-child {
+	height: 110px;
+}
+
+div.grid-cell {
+	display: inline-block;
+	background-color: #ccc0b5;
+	width: 130px;
+	height: 130px;
+	border-right:20px solid #bbada3;
+	border-bottom:20px solid #bbada3;
+}
+
+div.grid-row:last-child div.grid-cell {
+	height: 110px;
+	border-bottom:none;
+}
+
+div.grid-cell:last-child {
+	width: 110px;
+	border-right:none;
+}
+div.cell-wrapper {
+	transition: transform 100ms;
+ 	transition-timing-function: ease-in-out;
+
+
+	-webkit-transition: -webkit-transform 100ms;
+	-webkit-transition-timing-function:ease-in-out;
+
+ 	-moz-transition: -moz-transform 100ms;
+ 	-moz-transition-timing-function:ease-in-out;
+
+
+	-o-transition: -o-transform 100ms;
+	-o-transition-timing-function: ease-in-out;
+
+
+
+	position: absolute;
+	height: 110px;
+	width: 110px;
+	line-height: 110px;
+	border-radius: 5px;
+	text-align: center;
+	font-weight: bold;
+	z-index: 10;
+	font-size: 55px;
+	top: 20px;
+	left: 20px;
+}
+
+
+div.number-2 {
+	background-color: #eee4da;
+	color: #776e65;
+}
+div.number-4 {
+	background-color: #ede0c8;
+	color: #776e65;
+}
+div.number-8 {
+	background-color: #f2b179;
+	color: #ffffff;
+}
+div.number-16 {
+	background-color: #ea8e59;
+	color: #ffffff;
+}
+div.number-32 {
+	background-color: #f37c65;
+	color: #ffffff;
+}
+div.number-64 {
+	background-color: #e55a3e;
+	color: #ffffff;
+}
+div.number-128 {
+	background-color: #f1d772;
+	color: #ffffff;
+}
+div.number-256 {
+	background-color: #f1cf58;
+	color: #ffffff;
+}
+div.number-512 {
+	background-color: #e2bf3b;
+	color: #ffffff;
+}
+div.number-1024 {
+	background-color: #fffa87;
+	color: #ffffff;
+}
+div.number-2048 {
+	background-color: #eee4da;
+	color: #ede0c8;
+}
+div.number-4096 {
+	background-color: #eee4da;
+	color: #ede0c8;
+}
+div.number-8192 {
+	background-color: #eee4da;
+	color: #ede0c8;
+}
+
+
+
+div.cell-inner {
+	-webkit-animation: appear 200ms ease 100ms;
+	-moz-animation: appear 200ms ease 100ms;
+	animation: appear 200ms ease 100ms;
+	-webkit-animation-fill-mode: backwards;
+	-moz-animation-fill-mode: backwards;
+	animation-fill-mode: backwards; 
+}
+
+
+.mask div{
+	display: block;
+}
+.title{
+	font-size: 55px;
+	font-weight: bold;
+	margin: 40px auto;
+}
+.mask{
+	top: 0;
+	left: 0;
+	position: fixed;
+	height: 100%;
+	z-index: 20;
+	background-color: #faf8ef;
+	text-align: center;
+	width: 100%;
+
+	-webkit-animation: animate 500ms ease-in-out 250ms;
+	-moz-animation: animate 500ms ease-in-out 250ms;
+	animation: animate 500ms ease-in-out 250ms;
+	-webkit-animation-fill-mode: backwards;
+	-moz-animation-fill-mode: backwards;
+	animation-fill-mode: backwards; 
+}
+.mask .score-container{
+	margin: 0 auto;
+	width: 220px;
+}
+.mask div#restart-btn{
+	width: 220px;
+	background-color: #bbada3;
+	font-size: 20px;
+}
