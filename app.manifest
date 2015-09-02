@@ -4,11 +4,11 @@ CACHE MANIFEST
 CACHE:
 
 #css
-./css/reset.min.css
+./css/reset.css
 ./css/style.css
 
 #img
-.favicon.ico
+favicon.ico
 
 #js
 
